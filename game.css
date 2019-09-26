@@ -1,10 +1,14 @@
-
+#welcome-image{
+    display:none;
+    width:30%;
+}
 #tic-tac-toe{
-  display: grid;
+  display: none;
   grid-template-columns: auto auto auto;
   background-color: #2196F3;
-  padding: 10px;
-  display: none;
+  padding: 5px;
+  width: 50%;
+
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
