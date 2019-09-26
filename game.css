@@ -5,15 +5,30 @@
 #tic-tac-toe{
   display: none;
   grid-template-columns: auto auto auto;
-  background-color: #2196F3;
+  
   padding: 5px;
   width: 50%;
+  background-image: url("doge.jpg");
 
 }
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
+
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 30px;
   text-align: center;
+  height: 100px;
+}
+
+#new-game{
+  display:none;
+}
+
+#scoreboard{
+  font-size:200%;
+}
+
+#welcome-message{
+  color: green;
+  font-weight: bold;
 }
