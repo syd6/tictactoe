@@ -38,30 +38,22 @@ function detectMove(id){
         var example = document.getElementById(id);
         example.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
         player1.moves.push(id)
-        detectWin()
+        detectWin(player1)
     }
     else{ 
         //assign move to player2
         var example = document.getElementById(id);
         example.style.backgroundColor = "red";
         player2.moves.push(id)
-        detectWin()
+        detectWin(player2)
     }
-    
 }
 
-function detectWin(){
-    document.getElementById("winner").innerHTML = "is this working lul"
+function detectWin(player){
+
     for (i = 0; i < allwins.length; i++){
-        console.log(allwins[i])
-        console.log(player1.moves)
-        if (player1.moves == allwins[i]){ //has to be contain cos does the order matter
+        if (JSON.stringify(player.moves) == JSON.stringify(allwins[i])){ //has to be contain cos does the order matter
             document.getElementById("winner").innerHTML = player1.name+" wins"
-            break
-        }
-        else if (player2.moves == allwins[i]){
-            document.getElementById("winner").innerHTML = player2.name+" wins"
-            break
         }
     }
 }
